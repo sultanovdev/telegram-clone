@@ -4,7 +4,7 @@ package uz.pdp.telegramclone.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import uz.pdp.telegramclone.entity.enums.UserStatus;
+import uz.pdp.telegramclone.enums.UserStatus;
 
 import java.time.LocalDateTime;
 

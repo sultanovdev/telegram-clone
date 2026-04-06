@@ -3,7 +3,7 @@ package uz.pdp.telegramclone.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import uz.pdp.telegramclone.entity.enums.MessageType;
+import uz.pdp.telegramclone.enums.MessageType;
 
 import java.time.LocalDateTime;
 
