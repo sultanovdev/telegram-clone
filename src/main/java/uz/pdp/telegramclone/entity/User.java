@@ -33,5 +33,7 @@ public class User {
     private UserStatus status;
     private LocalDateTime createdAt;
 
+    private LocalDateTime lastActivityTime;
+
 
 }
