@@ -3,25 +3,27 @@ package uz.pdp.telegramclone.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import uz.pdp.telegramclone.enums.ContactStatus;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
-public class Contacts {
+public class CallParticipant {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(nullable = false)
-    private String id;
-
+    private UUID id;
     @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
-
+    private CallSession callSessions;
     @ManyToOne(fetch = FetchType.LAZY)
-    private User contact;
-    private ContactStatus status;
-    private LocalDateTime createdAt;
+    private User userId;
 
+    private boolean audioEnabled;
+    private boolean videoEnabled;
+    private boolean screenSharing;
+
+    private LocalDateTime joinedAt;
+    private LocalDateTime leftAt;
 }

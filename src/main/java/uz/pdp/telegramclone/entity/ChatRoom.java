@@ -3,27 +3,27 @@ package uz.pdp.telegramclone.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import uz.pdp.telegramclone.enums.MessageType;
+import uz.pdp.telegramclone.enums.ChatType;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
+
 
 @Entity
 @Getter
 @Setter
-public class Messages {
+public class ChatRoom {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(nullable = false)
-    private String id;
+    private UUID id;
+    private String name;
+    private ChatType chatType;
+    private String profilePhotoUrl;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private ChatRooms chatId;
+    private User createdBy;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User senderId;
-
-    private MessageType messageType;
-    private String content;
     private LocalDateTime createdAt;
 
 }

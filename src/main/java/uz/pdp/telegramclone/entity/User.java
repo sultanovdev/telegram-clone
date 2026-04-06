@@ -7,6 +7,7 @@ import lombok.Setter;
 import uz.pdp.telegramclone.enums.UserStatus;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -15,7 +16,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(nullable = false)
-    private String uuid;
+    private UUID id;
 
     private String firstName;
     private String lastName;
