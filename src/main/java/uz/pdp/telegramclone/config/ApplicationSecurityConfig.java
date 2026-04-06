@@ -15,10 +15,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import uz.pdp.telegramclone.request_filters.jwt.JwtEmailAndPasswordAuthenticationFilter;
+import uz.pdp.telegramclone.request_filters.jwt.JwtVerifier;
 import uz.pdp.telegramclone.service.ApplicationUserService;
-import uz.pdp.telegramclone.service.jwt.JwtEmailAndPasswordAuthenticationFilter;
 import uz.pdp.telegramclone.service.jwt.JwtService;
-import uz.pdp.telegramclone.service.jwt.JwtVerifier;
 
 @Configuration
 @EnableWebSecurity
